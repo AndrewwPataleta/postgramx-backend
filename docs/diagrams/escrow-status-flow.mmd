@@ -1,0 +1,12 @@
+stateDiagram-v2
+  [*] --> CREATED
+  CREATED --> AWAITING_PAYMENT: deal enters payment stage
+  AWAITING_PAYMENT --> PAID_PARTIAL: first transfer below required amount
+  PAID_PARTIAL --> AWAITING_PAYMENT: waiting remaining amount
+  AWAITING_PAYMENT --> PAID_HELD: full amount confirmed
+  PAID_PARTIAL --> FAILED: payment deadline reached
+  AWAITING_PAYMENT --> FAILED: payment deadline reached
+  PAID_HELD --> PAYOUT_PENDING: delivery confirmed and payout requested
+  PAYOUT_PENDING --> PAID_OUT: payout transaction completed
+  PAID_HELD --> REFUND_PENDING: cancel or moderation event
+  REFUND_PENDING --> REFUNDED: refund transaction completed

@@ -1,0 +1,6 @@
+export enum CreativeStatus {
+  DRAFT = 'DRAFT',
+  RECEIVED_IN_BOT = 'RECEIVED_IN_BOT',
+  REJECTED = 'REJECTED',
+  APPROVED = 'APPROVED',
+}

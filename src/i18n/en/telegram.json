@@ -1,0 +1,178 @@
+{
+  "common": {
+    "open_mini_app": "Open App",
+    "open_deal": "Open Deal",
+    "pay_in_app": "Pay in app",
+    "marketplace": "Marketplace",
+    "my_deals": "My Deals",
+    "my_channels": "My Channels",
+    "help": "Help",
+    "support": "Support",
+    "about_escrow": "About escrow",
+    "tbd": "TBD",
+    "local_time_with_gmt": "{localDateTime}"
+  },
+  "start": {
+    "message": "<b>Welcome to PostgramX</b>\nBuy and sell Telegram ads with <b>escrow</b> and <b>auto-posting</b>.\n\nTap <b>Open App</b> to continue, or learn more about escrow below."
+  },
+  "about_escrow": {
+    "message": "<b>About escrow</b>\nEscrow keeps the advertiser's funds on <b>hold</b> until the ad is published and delivery is verified.\n\n<b>How it works</b>\n1) The advertiser funds the deal - money is <b>held</b>.\n2) The channel publishes the post at the agreed time.\n3) We verify the post stays live until the deadline.\n4) Funds are <b>released to the channel</b>. If conditions are not met, a <b>refund</b> is issued."
+  },
+  "help": {
+    "message": "Need help getting started? Here is the flow:\n1) Advertisers create a deal in the App.\n2) Channel owners verify their channel by adding the bot as admin.\n3) Escrow holds funds until the post goes live.\n4) Both sides can track status inside the App.\n5) Use notifications here for quick updates.\n\nTap a button below to continue."
+  },
+  "errors": {
+    "invalid_deal_link": "Invalid deal link.",
+    "unknown_command": "I do not recognize this command. Type /help.",
+    "manage_in_app": "To manage deals, open the App. Type /help."
+  },
+  "deal": {
+    "creative_required": {
+      "message": "<b>Ad creative required</b>\n\nPlease send the ad post content to this bot so the channel admin can review it.\n\nSupported formats:\n- Text\n- Image + caption\n- Video + caption\n\n You can always check the status in the App."
+    },
+    "creative_ready": "<b>Ready to receive creative</b>\nDeal: <code>{dealId}</code>\nPlease send the post content to this bot.",
+    "creative": {
+      "unsupported_format": "Unsupported format.\nSend: text, photo with caption, or video with caption.",
+      "save_failed": "Failed to save creative due to a server error.\nPlease try again in 1 minute. If it persists, re-open the App and re-schedule.",
+      "missing_caption": "Please add a caption (text) to your media, or send text separately.",
+      "processing_failed": "I cannot process your creative right now. Please try again.",
+      "link_account_required": "Please open the App first to link your account.",
+      "no_active_deal": "No active deal found. Please schedule a deal first.",
+      "select_deal": "<b>Choose a deal for this creative</b>\nSelect the deal you want to attach this creative to.\n\n{dealsList}",
+      "select_deal_button": "Deal {dealId}",
+      "selection_expired": "I couldn't find the creative to attach. Please send it again.",
+      "saved": "Creative saved for Deal #{dealId}. Return to the App and press Submit Creative.",
+      "changes_requested": "<b>Changes requested</b>\n\nAdvertiser has been notified.",
+      "changes_requested_advertiser": "Changes requested for Deal {dealId}.\nChannel: {channel}\nPrice: {price}\nCreated: {createdAt}\nNotes: {comment}",
+      "rejected_notified": "<b>Creative rejected</b>\n\nAdvertiser has been notified. Deal closed.",
+      "rejected_resubmit": "<b>Creative rejected</b>\n\nPlease submit a new creative in the App.",
+      "rejected_closed_advertiser": "<b>Creative rejected</b>\n\nThe deal is closed.\nReason: creative rejected by the channel admin.",
+      "request_changes_prompt": "To request changes, reply to this message with the edit details.\n",
+      "restore_bot_admin": "Before approving, add the bot back as a channel admin and try again."
+    },
+    "creative_submitted": {
+      "message": "<b>Creative submitted for review</b>\n<b>Channel:</b> {channel}\n<b>Deal:</b> <code>{dealId}</code>\n\n<b>Creative:</b>\n{creativeText}\n\nNext step: review and approve in the App.\nDeadline to act: {actionDeadline}",
+      "unsupported_preview": "<b>Creative submitted for review</b>\n<b>Channel:</b> {channel}\n<b>Deal:</b> <code>{dealId}</code>\n\nCreative preview is not supported for this format.\n\nNext step: review and approve in the App.\nDeadline to act: {actionDeadline}"
+    },
+    "creative_submitted.advertiser": "<b>Creative submitted</b>\n<b>Deal:</b> <code>{dealId}</code>\n\nWe sent the creative to the channel admin for review.\nNext step: wait for approval in the App.\nDeadline to act: {actionDeadline}",
+    "creative_approved": {
+      "admin": "<b>Creative approved</b>\n<b>Deal:</b> <code>{dealId}</code>\n\nNext step: advertiser sets the publish time in the App.\nDeadline to act: {actionDeadline}",
+      "advertiser": "<b>Creative approved</b>\n<b>Deal:</b> <code>{dealId}</code>\n\nNext step: set the publish time in the App.\nDeadline to act: {actionDeadline}"
+    },
+    "payment_required": {
+      "basic": "<b>Schedule approved</b>\n\n<b>Deal:</b> <code>{dealId}</code>\nNext: proceed with payment in the App.\nPayment window: {paymentDeadline}",
+      "with_deadline": "<b>Schedule approved</b>\n\n<b>Deal:</b> <code>{dealId}</code>\nNext: proceed with payment in the App.\nPayment window: until {paymentDeadline}",
+      "with_address": "<b>Schedule approved</b>\n\n<b>Deal:</b> <code>{dealId}</code>\nNext: proceed with payment in the App.\nPayment window: {paymentDeadline}\nPayment address: {paymentAddress}",
+      "with_deadline_and_address": "<b>Schedule approved</b>\n\n<b>Deal:</b> <code>{dealId}</code>\nNext: proceed with payment in the App.\nPayment window: until {paymentDeadline}\nPayment address: {paymentAddress}"
+    },
+    "partial_payment": {
+      "message": "<b>Partial payment received</b>\n\n<b>Deal:</b> <code>{dealId}</code>\n<b>Received:</b> {received} {currency}\n<b>Remaining:</b> {remaining} {currency}\n\nPlease complete payment in the App to keep the deal active."
+    },
+    "payment_confirmed": {
+      "message": "<b>Payment confirmed</b>\n\n<b>Deal:</b> <code>{dealId}</code>\nNext: wait for the post scheduling/publishing flow in the App.",
+      "with_tx": "<b>Payment confirmed</b>\n\n<b>Deal:</b> <code>{dealId}</code>\nTransaction: <a href=\"{txUrl}\">view on TonScan</a>\nNext: wait for the post scheduling/publishing flow in the App."
+    },
+    "notification": {
+      "created": "<b>New deal request</b>\n<b>Channel:</b> {channel}\n<b>Deal:</b> <code>{dealId}</code>\nAction: Please review and confirm in the App.\nDeadline to act: {actionDeadline}",
+      "action_required": "<b>Deal action required</b>\n<b>Channel:</b> {channel}\n<b>Deal:</b> <code>{dealId}</code>\nAction: {reason}.\nDeadline to act: {actionDeadline}",
+      "post_not_published_admin": "<b>Deal completed</b>: post was not published.\n<b>Channel:</b> {channel}\n<b>Deal:</b> <code>{dealId}</code>",
+      "post_published_admin": "<b>Post published</b>.\nAttention: if the post is deleted before the deadline or edited, the advertiser will receive a refund.",
+      "deal_completed_admin": "Deal completed successfully.\nChannel: {channel}\nDeal: {dealId}\nChannel balance topped up: {amount} {currency}.\nYou can withdraw in the app.",
+      "deal_completed_admin_stats": "Completed publication stats.\nChannel: {channel}\nDeal: {dealId}\nPost views: {views}\nTracked links: {trackedChannels}\nSubscribers gained: {subscribersDelta}",
+      "post_delete_failed_admin": "Publication completed, but the post could not be deleted automatically.\nChannel: {channel}\nDeal: {dealId}\nPlease delete the post manually.",
+      "post_deleted_admin": "Deal canceled: post was deleted.\nChannel: {channel}\nDeal: {dealId}\nRefund initiated.",
+      "post_edited_admin": "Deal canceled: post was edited.\nChannel: {channel}\nDeal: {dealId}\nRefund initiated.",
+      "post_check_unavailable_admin": "<b>Deal canceled</b>: the bot does not have enough rights to verify the post.\nThe advertiser will receive a refund."
+    },
+    "action_reason": {
+      "verification": "Verification required",
+      "approval": "Approval required",
+      "payment": "Payment required",
+      "publish": "Publish confirmation required",
+      "generic": "Action required"
+    },
+    "canceled": {
+      "admin_rights_lost": "<b>Deal canceled</b>: channel admin rights were revoked. Refund initiated.",
+      "bot_rights_lost": "<b>Deal canceled</b>: bot lost admin rights. Refund initiated.",
+      "idle_timeout": "<b>Deal canceled</b>: no activity before the deadline.",
+      "payment_timeout": "<b>Deal canceled</b>: payment deadline passed."
+    },
+    "post": {
+      "not_published_advertiser": "<b>Post not published</b>: the channel admin removed the bot's admin rights.\nFunds have been returned to your withdrawal wallet. Open the app to withdraw.",
+      "deleted_advertiser": "Post deleted by the channel. Deal canceled and refund initiated. Open the app to withdraw.",
+      "edited_advertiser": "Post was edited by the channel. Deal canceled and refund initiated. Open the app to withdraw.",
+      "completed_advertiser": "Advertising completed successfully. History has been saved.",
+      "completed_advertiser_with_amount": "Publication completed successfully.\nAmount for this post: {amount} {currency}.\nHistory has been saved.",
+      "completed_stats_advertiser": "Completed publication stats.\nPost views: {views}\nTracked links: {trackedChannels}\nSubscribers gained: {subscribersDelta}",
+      "published": "<b>Post published</b>. We will verify delivery.\nThe post must remain until {mustRemainUntil}.\nWe will monitor the conditions and the post.\nIf the post is deleted earlier, we will refund the funds to your wallet.",
+      "delivery_confirmed": "<b>Delivery confirmed</b>. Funds released.",
+      "check_unavailable_advertiser": "<b>Deal canceled</b>: the bot does not have enough rights to verify the post.\nRefund initiated. Open the app to withdraw funds."
+    },
+    "pin_missing_warning": "<b>Pinned post missing</b>\nChannel: {channel}\nDeal: <code>{dealId}</code>\nPlease repin the post before the next check to avoid auto-cancel and refund.",
+    "pin_missing_finalized": "<b>Deal canceled</b>: pinned post missing.\nChannel: {channel}\nDeal: <code>{dealId}</code>\nRefund initiated.",
+    "pin_check_unavailable": "<b>Pin check unavailable</b>\nChannel: {channel}\nDeal: <code>{dealId}</code>\nThe bot cannot read pinned posts. Please restore admin rights and re-verify.",
+    "buttons": {
+      "approve": "Approve",
+      "confirm": "Confirm",
+      "request_changes": "Request changes",
+      "reject": "Reject",
+      "cancel": "Cancel",
+      "open_post": "Open post"
+    },
+    "schedule_submitted": {
+      "message": "<b>Schedule submitted for review</b>\n<b>Channel:</b> {channel}\n<b>Deal:</b> <code>{dealId}</code>\n<b>Publish time:</b> {scheduledAt}\n\n<b>Creative:</b>\n{creativeText}\n\nNext step: review and approve in the App.\nDeadline to act: {actionDeadline}",
+      "unsupported_preview": "<b>Schedule submitted for review</b>\n<b>Channel:</b> {channel}\n<b>Deal:</b> <code>{dealId}</code>\n<b>Publish time:</b> {scheduledAt}\n\nCreative preview is not supported for this format.\n\nNext step: review and approve in the App.\nDeadline to act: {actionDeadline}"
+    },
+    "schedule": {
+      "approved": "<b>Schedule approved</b>\n\nAdvertiser has been notified.",
+      "canceled_advertiser": "Schedule canceled for Deal {dealId}. Please review and resubmit in the App.",
+      "canceled_notified": "<b>Schedule canceled</b>\n\nAdvertiser has been notified.",
+      "request_changes_prompt": "To request schedule changes, reply to this message with the updated scheduling details.\n",
+      "changes_requested": "<b>Schedule changes requested</b>\n\nAdvertiser has been notified.",
+      "changes_requested_advertiser": "Schedule changes requested for Deal {dealId}.\nNotes: {comment}"
+    },
+    "schedule_submitted.advertiser": "<b>Schedule sent for review</b>\n<b>Deal:</b> <code>{dealId}</code>\n\nWe sent the schedule to the channel admin.\nNext step: wait for approval in the App.\nDeadline to act: {actionDeadline}",
+    "schedule_approved": {
+      "admin": "<b>Schedule approved</b>\n<b>Deal:</b> <code>{dealId}</code>\n\nNext step: advertiser completes payment in the App.\nPayment deadline: {paymentDeadline}",
+      "advertiser": "<b>Schedule approved</b>\n<b>Deal:</b> <code>{dealId}</code>\n<b>Amount:</b> {amount} {currency}\n\nNext step - complete payment in the App\n<b>Deadline:</b> {paymentDeadline}"
+    },
+    "schedule_confirm_too_late": {
+      "admin": "Confirmed too late. The advertiser will pick a new time.",
+      "advertiser": "The channel admin confirmed too late. Please choose a new time."
+    },
+    "admin_review": {
+      "approved": "<b>Deal approved</b>\n<b>Admin:</b> {adminName}\n<b>Channel:</b> {channel}\n<b>Deal:</b> <code>{dealId}</code>\n<b>Price:</b> {price} {currency}\n<b>Publish time:</b> {publishTime}",
+      "rejected": "<b>Deal rejected</b>\n<b>Admin:</b> {adminName}\n<b>Channel:</b> {channel}\n<b>Deal:</b> <code>{dealId}</code>"
+    },
+    "request_changes": {
+      "failed": "Failed to process the change request. Please try again in the App."
+    },
+    "canceled_refund_available": "<b>Deal canceled</b>\n<b>Refund available</b>\n<b>Amount</b> - {amountTon} TON\nYou can withdraw in the Mini App",
+    "canceled_no_payment": "<b>Deal canceled</b>\nNo payment received"
+  },
+  "payment": {
+    "expired": "<b>Payment window expired</b>; funds cannot be applied automatically. Contact support.",
+    "payout_confirmed": "<b>Withdrawal completed</b>.\nPlease check your wallet.\nIf you have any questions, contact support."
+  },
+  "payout": {
+    "blocked_liquidity": {
+      "user_message": "<b>Withdrawal failed</b> due to a temporary liquidity issue.\nFunds were returned to your balance.",
+      "support_cta": "Contact support: {supportUrl}"
+    },
+    "daily_limit_reached": "<b>Withdrawal limit reached</b>\nLimit - {limit} requests per day\nTry again tomorrow"
+  },
+  "admin": {
+    "daily_withdraw_limit": "<b>Event type</b> - {eventType}\n<b>User ID</b> - {userId}\n<b>Username</b> - {username}\n<b>Limit</b> - {limit} requests per day",
+    "refund_credited": "<b>Event type</b> - {eventType}\n<b>User ID</b> - {userId}\n<b>Username</b> - {username}\n<b>Amount TON</b> - {amountTon}\n<b>Amount nano</b> - {amountNano}\n<b>Deal ID</b> - {dealId}"
+  },
+  "moderators": {
+    "changed": {
+      "title": "<b>Channel</b> - {channelRef}\n\n{changes}\n\n{cta}\n{miniAppUrl}",
+      "added": "Added moderators",
+      "removed": "Removed moderators",
+      "cta_manage": "Open the Mini App to manage permissions"
+    },
+    "owner_lost_rights": "<b>Owner lost admin rights</b>\n<b>Channel</b> - {channelRef}\n\nRestore Telegram admin rights and re-verify in the Mini App\n{miniAppUrl}",
+    "owner_lost_rights_admin_alert": "<b>Owner lost admin rights</b>\n<b>Channel</b> - {channelRef}\n- ownerUserId - {ownerUserId}\n- telegramChatId - {telegramChatId}"
+  }
+}

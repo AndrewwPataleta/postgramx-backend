@@ -1,0 +1,217 @@
+{
+  "auth": {
+    "unauthorized": "Oops! We couldn't verify your token or platform.",
+    "missing": "Oops! Token or platform is missing."
+  },
+  "errors": {
+    "user_not_authenticated": "Please sign in to continue.",
+    "user_not_found": "We couldn't find that user.",
+    "invalid_uuid": "The provided ID doesn't look right.",
+    "purchase_item_not_found": "We couldn't find that purchase item.",
+    "wish_item_not_found": "We couldn't find that wish.",
+    "wish_item_already_booked": "Someone already booked this wish.",
+    "wish_item_not_booked": "You haven't booked this wish yet.",
+    "max_wishlist_items": "You've reached the maximum number of wishes.",
+    "task_not_found": "Task not found.",
+    "result_not_found": "No results found.",
+    "invalid_payment_data": "Payment data looks incorrect.",
+    "animation_not_found": "Animation file not found.",
+    "payment_link_failed": "We couldn't generate a payment link.",
+    "user_not_defined": "User is not defined.",
+    "user_email_exists": "User with this email already exists.",
+    "verification_code_not_generated": "Verification code is not generated.",
+    "verification_code_expired": "Verification code has expired.",
+    "verification_code_incorrect": "Verification code is incorrect.",
+    "verification_code_sent_recently": "Verification code was sent recently.",
+    "invalid_photo_data": "Invalid photo data.",
+    "secret_santa_not_found": "Secret Santa not found.",
+    "secret_santa_already_started": "Secret Santa already started.",
+    "secret_santa_already_joined": "You have already joined this Secret Santa.",
+    "secret_santa_not_enough_participants": "Not enough participants to start Secret Santa.",
+    "secret_santa_only_creator_can_remove": "Only the creator can remove participants.",
+    "secret_santa_only_creator_can_start": "Only the creator can start Secret Santa.",
+    "participant_not_found": "Participant not found.",
+    "invalid_credentials": "Invalid credentials.",
+    "email_not_verified": "Email is not verified.",
+    "spaces_credentials_not_configured": "DigitalOcean Spaces credentials are not configured on the server.",
+    "spaces_endpoint_not_configured": "DigitalOcean Spaces endpoint is not configured on the server.",
+    "spaces_upload_failed": "Failed to upload image to storage.",
+    "validation_failed": "Validation failed.",
+    "balance": {
+      "currency_unsupported": "Currency is not supported."
+    },
+    "deals": {
+      "active_pending_limit": "You already have active pending deals for this listing.",
+      "deal_not_actionable": "The deal is not in the expected state.",
+      "deadline_passed": "The deadline for this deal action has passed.",
+      "creative_not_submitted": "Creative has not been submitted yet."
+    }
+  },
+  "balance": {
+    "withdraw_full_amount_note": "Network fee is paid by the platform."
+  },
+  "internalProductCategories": {
+    "pets": "Pet Supplies",
+    "servicesRentals": "Services & Rentals",
+    "hobbies": "Hobbies",
+    "digitalGoods": "Digital Goods",
+    "electronics": "Electronics",
+    "jewelry": "Jewelry",
+    "other": "Other",
+    "beautyHealth": "Beauty & Health",
+    "footwear": "Footwear",
+    "clothing": "Clothing",
+    "groceries": "Groceries",
+    "workwearPpe": "Workwear & PPE",
+    "sportingGoods": "Sporting Goods",
+    "automotiveMoto": "Automotive & Motorcycle",
+    "accessories": "Accessories",
+    "homeAppliances": "Home Appliances",
+    "homeGarden": "Home & Garden",
+    "kids": "Kids' Products",
+    "booksStationery": "Books & Stationery"
+  },
+  "channels": {
+    "errors": {
+      "invalid_username": "Invalid Telegram username.",
+      "channel_not_found": "Channel not found.",
+      "not_a_channel": "The provided chat is not a channel.",
+      "channel_private_or_no_username": "Channel is private or missing a username.",
+      "bot_forbidden": "Bot is forbidden from accessing the channel.",
+      "user_not_admin": "User is not an administrator of the channel.",
+      "bot_not_admin": "Bot is not an administrator of the channel.",
+      "bot_missing_rights": "Bot is missing required permissions.",
+      "user_not_member": "User is not a member of the channel.",
+      "membership_disabled": "Channel access is disabled for this user.",
+      "membership_inactive": "Channel membership is inactive.",
+      "not_admin": "User is not an administrator of the channel.",
+      "not_admin_anymore": "User is no longer an administrator of the channel.",
+      "missing_rights": "User lacks required administrator rights.",
+      "user_not_creator": "User is not the channel creator.",
+      "channel_already_linked": "Channel is already linked to your account.",
+      "moderator_not_admin": "Moderator is not a Telegram admin anymore."
+    }
+  },
+  "payments": {
+    "errors": {
+      "deal_not_found": "Deal not found.",
+      "forbidden": "You do not have access to this deal.",
+      "invalid_transition": "The deal is not in the expected state.",
+      "escrow_already_initialized": "Escrow has already been initialized for this deal.",
+      "escrow_amount_mismatch": "Escrow amount does not match the deal.",
+      "escrow_wallet_missing": "Escrow wallet is missing for this deal.",
+      "escrow_amount_missing": "Escrow amount is not set for this deal.",
+      "mock_disabled": "Mock escrow actions are disabled in production.",
+      "channel_not_found": "Channel not found.",
+      "wallet_not_connected": "Wallet is not connected.",
+      "insufficient_funds": "Insufficient funds for withdrawal.",
+      "invalid_amount": "Withdrawal amount is invalid.",
+      "insufficient_liquidity": "Payout liquidity is insufficient.",
+      "payout_already_in_progress": "A payout request is already in progress.",
+      "internal_error": "Payout request failed. Please try again later.",
+      "invalid_destination": "Destination address is invalid.",
+      "withdraw_minimum": "Withdrawal amount is below the minimum allowed.",
+      "withdraw_failed": "Withdrawal failed. Please try again later.",
+      "daily_withdraw_limit": "Daily withdrawal limit reached. Try again tomorrow."
+    },
+    "transactions": {
+      "types": {
+        "deposit": "Deposit",
+        "payout": "Payout",
+        "withdraw": "Withdrawal",
+        "escrow_hold": "Escrow hold",
+        "escrow_release": "Escrow release",
+        "escrow_refund": "Escrow refund",
+        "fee": "Fee",
+        "network_fee": "Network fee"
+      },
+      "statuses": {
+        "pending": "Pending",
+        "partial": "Partially confirmed",
+        "awaiting_confirmation": "Awaiting confirmation",
+        "confirmed": "Confirmed",
+        "completed": "Completed",
+        "blocked_liquidity": "Blocked by liquidity",
+        "refunded": "Refunded",
+        "failed": "Failed",
+        "canceled": "Canceled"
+      },
+      "reasons": {
+        "bot_not_admin": "Bot is not an administrator of the channel.",
+        "post_failed": "Post publishing failed.",
+        "delivery_confirmed": "Delivery confirmed.",
+        "admin_rejected": "Admin rejected the deal.",
+        "canceled": "Deal canceled.",
+        "admin_rights_lost": "Admin rights were lost."
+      },
+      "descriptions": {
+        "escrow_hold": "Escrow hold",
+        "channel_withdrawal": "Channel withdrawal",
+        "service_fee": "Service fee charged",
+        "network_fee": "Network fee charged"
+      }
+    }
+  },
+  "payouts": {
+    "request": {
+      "summary": {
+        "title": "Payout summary",
+        "receive": "Amount you will receive",
+        "serviceFee": "Service fee",
+        "networkFee": "Network fee (estimated)",
+        "totalDebit": "Total debited"
+      },
+      "insufficientBalance": "Insufficient balance. Available: {{available}}, required: {{required}}.",
+      "walletNotConnected": "Wallet is not connected.",
+      "failed": "Payout request failed. Please try again later."
+    }
+  },
+  "deals": {
+    "errors": {
+      "dealNotFound": "Deal not found.",
+      "listingNotFound": "Listing not found.",
+      "listingDisabled": "Listing is disabled.",
+      "unauthorized": "You do not have access to this deal.",
+      "invalidScheduleTime": "Scheduled time must be in the future.",
+      "invalidTransition": "The deal is not in the expected state.",
+      "selfDealNotAllowed": "You can’t create a deal with your own channel.",
+      "scheduleConfirmTooLate": "Schedule confirmation is too late. Please choose a new time."
+    },
+    "stages": {
+      "unknown": "Unknown status",
+      "draft": "Draft",
+      "waiting_schedule": "Choose time",
+      "waiting_creative": "Send creative",
+      "waiting_creative_approve": "Creative waiting approve",
+      "creative_submitted": "Creative submitted",
+      "admin_review": "Awaiting admin approval",
+      "changes_requested": "Changes requested",
+      "awaiting_payment": "Awaiting payment",
+      "PAYMENT_AWAITING": "Payment processing",
+      "funds_confirmed": "Payment confirmed",
+      "posting": "Posting",
+      "finalized": "Finished",
+      "posted_verifying": "Verifying post",
+      "released": "Released",
+      "canceled": "Canceled",
+      "refunded": "Refunded",
+      "disputed": "Disputed"
+    }
+  },
+  "listings": {
+    "errors": {
+      "channelNotFound": "Channel not found.",
+      "unauthorized": "You do not have access to this channel.",
+      "channelNotVerified": "Channel is not verified.",
+      "invalidFormat": "Listing format is invalid.",
+      "invalidAvailability": "Availability window is invalid.",
+      "invalidPinnedRule": "Pinned placement settings do not match.",
+      "tagsMissingRequired": "Required tag is missing.",
+      "invalidRequiresApproval": "Listings must require approval in MVP.",
+      "invalidPrice": "Listing price is invalid.",
+      "notFound": "Listing not found.",
+      "forbidden": "You do not have access to this listing.",
+      "invalidUpdate": "Listing update is invalid."
+    }
+  }
+}

@@ -1,0 +1,7 @@
+export enum ChannelStatus {
+  DRAFT = 'DRAFT',
+  PENDING_VERIFY = 'PENDING_VERIFY',
+  VERIFIED = 'VERIFIED',
+  FAILED = 'FAILED',
+  REVOKED = 'REVOKED',
+}

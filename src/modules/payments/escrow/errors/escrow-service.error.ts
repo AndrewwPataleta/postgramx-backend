@@ -1,0 +1,16 @@
+export enum EscrowServiceErrorCode {
+  DEAL_NOT_FOUND = 'DEAL_NOT_FOUND',
+  FORBIDDEN = 'FORBIDDEN',
+  INVALID_TRANSITION = 'INVALID_TRANSITION',
+  ESCROW_ALREADY_INITIALIZED = 'ESCROW_ALREADY_INITIALIZED',
+  ESCROW_AMOUNT_MISMATCH = 'ESCROW_AMOUNT_MISMATCH',
+  ESCROW_WALLET_MISSING = 'ESCROW_WALLET_MISSING',
+  ESCROW_AMOUNT_NOT_SET = 'ESCROW_AMOUNT_NOT_SET',
+  MOCK_DISABLED = 'MOCK_DISABLED',
+}
+
+export class EscrowServiceError extends Error {
+  constructor(public readonly code: EscrowServiceErrorCode) {
+    super(code);
+  }
+}

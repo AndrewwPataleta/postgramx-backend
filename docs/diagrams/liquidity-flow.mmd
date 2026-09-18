@@ -1,0 +1,12 @@
+flowchart TD
+    A[Payout request] --> B[Check hot wallet balance]
+    B --> C{Available >= required?}
+    C -- Yes --> D[Execute payout from hot wallet]
+    C -- No --> E{SWEEP_FALLBACK_ENABLED?}
+    E -- No --> F[Mark payout as pending/failed by policy]
+    E -- Yes --> G[Read deposit wallet balance]
+    G --> H[Compute max sweepable with gas reserve]
+    H --> I{Sweepable >= min withdraw?}
+    I -- No --> J[Skip sweep and alert]
+    I -- Yes --> K[Sweep to hot wallet]
+    K --> L[Retry payout execution]

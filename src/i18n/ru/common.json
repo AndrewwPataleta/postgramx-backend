@@ -1,0 +1,217 @@
+{
+  "auth": {
+    "unauthorized": "Упс! Не удалось подтвердить токен или платформу.",
+    "missing": "Упс! Токен или платформа отсутствует."
+  },
+  "errors": {
+    "user_not_authenticated": "Пожалуйста, войдите в систему.",
+    "user_not_found": "Не удалось найти пользователя.",
+    "invalid_uuid": "Похоже, указан неверный ID.",
+    "purchase_item_not_found": "Не удалось найти товар для покупки.",
+    "wish_item_not_found": "Не удалось найти желаемый предмет.",
+    "wish_item_already_booked": "Этот подарок уже забронирован.",
+    "wish_item_not_booked": "Вы еще не забронировали этот подарок.",
+    "max_wishlist_items": "Вы достигли максимального числа желаний.",
+    "task_not_found": "Задача не найдена.",
+    "result_not_found": "Результаты не найдены.",
+    "invalid_payment_data": "Некорректные платежные данные.",
+    "animation_not_found": "Анимационный файл не найден.",
+    "payment_link_failed": "Не удалось создать ссылку на оплату.",
+    "user_not_defined": "Пользователь не определен.",
+    "user_email_exists": "Пользователь с таким email уже существует.",
+    "verification_code_not_generated": "Код подтверждения не был сгенерирован.",
+    "verification_code_expired": "Срок действия кода подтверждения истек.",
+    "verification_code_incorrect": "Код подтверждения неверный.",
+    "verification_code_sent_recently": "Код подтверждения был отправлен недавно.",
+    "invalid_photo_data": "Некорректные данные изображения.",
+    "secret_santa_not_found": "Тайный Санта не найден.",
+    "secret_santa_already_started": "Тайный Санта уже запущен.",
+    "secret_santa_already_joined": "Вы уже участвуете в этом Тайном Санте.",
+    "secret_santa_not_enough_participants": "Недостаточно участников для запуска Тайного Санты.",
+    "secret_santa_only_creator_can_remove": "Только создатель может удалять участников.",
+    "secret_santa_only_creator_can_start": "Только создатель может запускать Тайного Санту.",
+    "participant_not_found": "Участник не найден.",
+    "invalid_credentials": "Неверные учетные данные.",
+    "email_not_verified": "Email не подтвержден.",
+    "spaces_credentials_not_configured": "Учетные данные DigitalOcean Spaces не настроены на сервере.",
+    "spaces_endpoint_not_configured": "Endpoint DigitalOcean Spaces не настроен на сервере.",
+    "spaces_upload_failed": "Не удалось загрузить изображение в хранилище.",
+    "validation_failed": "Ошибка валидации.",
+    "balance": {
+      "currency_unsupported": "Валюта не поддерживается."
+    },
+    "deals": {
+      "active_pending_limit": "У вас уже есть активные сделки в ожидании по этому листингу.",
+      "deal_not_actionable": "Сделка находится в неверном состоянии.",
+      "deadline_passed": "Срок действия для этого действия по сделке истёк.",
+      "creative_not_submitted": "Креатив ещё не отправлен."
+    }
+  },
+  "balance": {
+    "withdraw_full_amount_note": "Сетевой сбор оплачивается платформой."
+  },
+  "internalProductCategories": {
+    "pets": "Товары для животных",
+    "servicesRentals": "Услуги и аренда",
+    "hobbies": "Хобби",
+    "digitalGoods": "Цифровые товары",
+    "electronics": "Электроника",
+    "jewelry": "Ювелирные изделия",
+    "other": "Другое",
+    "beautyHealth": "Красота и здоровье",
+    "footwear": "Обувь",
+    "clothing": "Одежда",
+    "groceries": "Продукты",
+    "workwearPpe": "Спецодежда и СИЗ",
+    "sportingGoods": "Спортивные товары",
+    "automotiveMoto": "Авто и мототовары",
+    "accessories": "Аксессуары",
+    "homeAppliances": "Бытовая техника",
+    "homeGarden": "Все для дома и сада",
+    "kids": "Детские товары",
+    "booksStationery": "Книги и канцелярия"
+  },
+  "channels": {
+    "errors": {
+      "invalid_username": "Некорректное имя пользователя Telegram.",
+      "channel_not_found": "Канал не найден.",
+      "not_a_channel": "Указанный чат не является каналом.",
+      "channel_private_or_no_username": "Канал приватный или без имени пользователя.",
+      "bot_forbidden": "Бот не имеет доступа к каналу.",
+      "user_not_admin": "Пользователь не является администратором канала.",
+      "bot_not_admin": "Бот не является администратором канала.",
+      "bot_missing_rights": "Боту не хватает необходимых прав.",
+      "user_not_member": "Пользователь не состоит в канале.",
+      "membership_disabled": "Доступ к каналу для пользователя отключён.",
+      "membership_inactive": "Участие пользователя в канале неактивно.",
+      "not_admin": "Пользователь не является администратором канала.",
+      "not_admin_anymore": "Пользователь больше не администратор канала.",
+      "missing_rights": "У пользователя недостаточно прав администратора.",
+      "user_not_creator": "Пользователь не является создателем канала.",
+      "channel_already_linked": "Канал уже привязан к вашему аккаунту.",
+      "moderator_not_admin": "Модератор больше не является администратором Telegram."
+    }
+  },
+  "payments": {
+    "errors": {
+      "deal_not_found": "Сделка не найдена.",
+      "forbidden": "Нет доступа к этой сделке.",
+      "invalid_transition": "Сделка находится в неверном состоянии.",
+      "escrow_already_initialized": "Эскроу уже создано для этой сделки.",
+      "escrow_amount_mismatch": "Сумма эскроу не совпадает со сделкой.",
+      "escrow_wallet_missing": "Эскроу-кошелёк не найден для этой сделки.",
+      "escrow_amount_missing": "Сумма эскроу не задана для этой сделки.",
+      "mock_disabled": "Тестовые операции эскроу отключены в продакшене.",
+      "channel_not_found": "Канал не найден.",
+      "wallet_not_connected": "Кошелёк не подключён.",
+      "insufficient_funds": "Недостаточно средств для вывода.",
+      "invalid_amount": "Сумма вывода указана неверно.",
+      "insufficient_liquidity": "Недостаточно ликвидности для выплаты.",
+      "payout_already_in_progress": "Запрос на выплату уже выполняется.",
+      "internal_error": "Ошибка запроса на выплату. Попробуйте позже.",
+      "invalid_destination": "Некорректный адрес получателя.",
+      "withdraw_minimum": "Сумма вывода ниже минимально допустимой.",
+      "withdraw_failed": "Не удалось выполнить вывод. Попробуйте позже.",
+      "daily_withdraw_limit": "Достигнут дневной лимит выводов. Попробуйте завтра."
+    },
+    "transactions": {
+      "types": {
+        "deposit": "Пополнение",
+        "payout": "Выплата",
+        "withdraw": "Вывод",
+        "escrow_hold": "Заморозка эскроу",
+        "escrow_release": "Выплата эскроу",
+        "escrow_refund": "Возврат эскроу",
+        "fee": "Комиссия",
+        "network_fee": "Сетевой сбор"
+      },
+      "statuses": {
+        "pending": "В ожидании",
+        "partial": "Частично подтверждено",
+        "awaiting_confirmation": "Ожидает подтверждения",
+        "confirmed": "Подтверждено",
+        "completed": "Завершено",
+        "blocked_liquidity": "Заблокировано по ликвидности",
+        "refunded": "Возвращено",
+        "failed": "Не удалось",
+        "canceled": "Отменено"
+      },
+      "reasons": {
+        "bot_not_admin": "Бот не является администратором канала.",
+        "post_failed": "Публикация поста не удалась.",
+        "delivery_confirmed": "Размещение подтверждено.",
+        "admin_rejected": "Администратор отклонил сделку.",
+        "canceled": "Сделка отменена.",
+        "admin_rights_lost": "Права администратора были потеряны."
+      },
+      "descriptions": {
+        "escrow_hold": "Заморозка эскроу",
+        "channel_withdrawal": "Вывод средств канала",
+        "service_fee": "Сервисная комиссия",
+        "network_fee": "Сетевой сбор"
+      }
+    }
+  },
+  "payouts": {
+    "request": {
+      "summary": {
+        "title": "Сводка выплаты",
+        "receive": "Сумма к получению",
+        "serviceFee": "Сервисная комиссия",
+        "networkFee": "Сетевой сбор (оценка)",
+        "totalDebit": "Списано всего"
+      },
+      "insufficientBalance": "Недостаточно средств. Доступно: {{available}}, требуется: {{required}}.",
+      "walletNotConnected": "Кошелёк не подключён.",
+      "failed": "Не удалось запросить выплату. Попробуйте позже."
+    }
+  },
+  "deals": {
+    "errors": {
+      "dealNotFound": "Сделка не найдена.",
+      "listingNotFound": "Листинг не найден.",
+      "listingDisabled": "Листинг отключён.",
+      "unauthorized": "Нет доступа к этой сделке.",
+      "invalidScheduleTime": "Время размещения должно быть в будущем.",
+      "invalidTransition": "Сделка находится в неверном состоянии.",
+      "selfDealNotAllowed": "Нельзя создавать сделку со своим каналом.",
+      "scheduleConfirmTooLate": "Подтверждение расписания слишком позднее. Пожалуйста, выберите новое время."
+    },
+    "stages": {
+      "unknown": "Неизвестный статус",
+      "draft": "Черновик",
+      "waiting_schedule": "Выберите время",
+      "waiting_creative": "Отправьте креатив",
+      "creative_submitted": "Креатив отправлен",
+      "admin_review": "Ожидает одобрения администратора",
+      "changes_requested": "Запрошены правки",
+      "awaiting_payment": "Ожидается оплата",
+      "PAYMENT_AWAITING": "Платёж обрабатывается",
+      "funds_confirmed": "Платёж подтверждён",
+      "scheduled": "Запланировано",
+      "finalized": "Завершено",
+      "posting": "Публикация",
+      "posted_verifying": "Проверка публикации",
+      "released": "Выплачено",
+      "canceled": "Отменено",
+      "refunded": "Возвращено",
+      "disputed": "Спор"
+    }
+  },
+  "listings": {
+    "errors": {
+      "channelNotFound": "Канал не найден.",
+      "unauthorized": "Нет доступа к этому каналу.",
+      "channelNotVerified": "Канал не подтверждён.",
+      "invalidFormat": "Неверный формат листинга.",
+      "invalidAvailability": "Некорректный период доступности.",
+      "invalidPinnedRule": "Настройки закрепления не совпадают.",
+      "tagsMissingRequired": "Отсутствует обязательный тег.",
+      "invalidRequiresApproval": "Листинги должны требовать подтверждения в MVP.",
+      "invalidPrice": "Некорректная цена листинга.",
+      "notFound": "Листинг не найден.",
+      "forbidden": "Нет доступа к этому листингу.",
+      "invalidUpdate": "Некорректные данные обновления листинга."
+    }
+  }
+}

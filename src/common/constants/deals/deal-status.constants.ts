@@ -1,0 +1,6 @@
+export enum DealStatus {
+  PENDING = 'PENDING',
+  ACTIVE = 'ACTIVE',
+  COMPLETED = 'COMPLETED',
+  CANCELED = 'CANCELED',
+}

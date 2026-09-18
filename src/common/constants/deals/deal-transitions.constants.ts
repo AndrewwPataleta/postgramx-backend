@@ -1,0 +1,65 @@
+import { DealStage } from './deal-stage.constants';
+
+export const DEAL_STAGE_TRANSITIONS: Record<DealStage, DealStage[]> = {
+  [DealStage.CREATIVE_AWAITING_SUBMIT]: [
+    DealStage.CREATIVE_AWAITING_CONFIRM,
+    DealStage.CREATIVE_AWAITING_FOR_CHANGES,
+    DealStage.FINALIZED,
+  ],
+  [DealStage.CREATIVE_AWAITING_FOR_CHANGES]: [
+    DealStage.CREATIVE_AWAITING_CONFIRM,
+    DealStage.CREATIVE_AWAITING_FOR_CHANGES,
+    DealStage.SCHEDULING_AWAITING_SUBMIT,
+    DealStage.FINALIZED,
+  ],
+  [DealStage.CREATIVE_AWAITING_CONFIRM]: [
+    DealStage.SCHEDULING_AWAITING_SUBMIT,
+    DealStage.CREATIVE_AWAITING_FOR_CHANGES,
+    DealStage.FINALIZED,
+  ],
+  [DealStage.SCHEDULING_AWAITING_SUBMIT]: [
+    DealStage.SCHEDULING_AWAITING_CONFIRM,
+    DealStage.SCHEDULE_AWAITING_FOR_CHANGES,
+    DealStage.FINALIZED,
+  ],
+  [DealStage.SCHEDULING_AWAITING_CONFIRM]: [
+    DealStage.PAYMENT_AWAITING,
+    DealStage.SCHEDULE_AWAITING_FOR_CHANGES,
+    DealStage.FINALIZED,
+  ],
+  [DealStage.SCHEDULE_AWAITING_FOR_CHANGES]: [
+    DealStage.SCHEDULING_AWAITING_CONFIRM,
+    DealStage.SCHEDULE_AWAITING_FOR_CHANGES,
+    DealStage.PAYMENT_AWAITING,
+    DealStage.FINALIZED,
+  ],
+  [DealStage.PAYMENT_AWAITING]: [
+    DealStage.PAYMENT_PARTIALLY_PAID,
+    DealStage.POST_SCHEDULED,
+    DealStage.REFUNDING,
+    DealStage.FINALIZED,
+  ],
+  [DealStage.PAYMENT_PARTIALLY_PAID]: [
+    DealStage.POST_SCHEDULED,
+    DealStage.REFUNDING,
+    DealStage.FINALIZED,
+  ],
+  [DealStage.POST_SCHEDULED]: [
+    DealStage.POST_PUBLISHING,
+    DealStage.REFUNDING,
+    DealStage.FINALIZED,
+  ],
+  [DealStage.POST_PUBLISHING]: [
+    DealStage.POSTED_VERIFYING,
+    DealStage.REFUNDING,
+    DealStage.FINALIZED,
+  ],
+  [DealStage.POSTED_VERIFYING]: [
+    DealStage.DELIVERY_CONFIRMED,
+    DealStage.REFUNDING,
+    DealStage.FINALIZED,
+  ],
+  [DealStage.DELIVERY_CONFIRMED]: [DealStage.FINALIZED],
+  [DealStage.REFUNDING]: [DealStage.FINALIZED],
+  [DealStage.FINALIZED]: [],
+};

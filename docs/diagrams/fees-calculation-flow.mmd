@@ -1,0 +1,10 @@
+flowchart TD
+    A[Input payout amount] --> B{PAYOUT_USER_RECEIVES_FULL_AMOUNT?}
+    B -- Yes --> C[service_fee=0, network_fee=0]
+    B -- No --> D{FEES_ENABLED?}
+    D -- No --> C
+    D -- Yes --> E[Compute service fee by FIXED/BPS]
+    E --> F[Clamp service fee min/max]
+    F --> G[Compute network fee by FIXED/ESTIMATE]
+    G --> H[Clamp network fee min/max]
+    H --> I[total_debit = amount + service_fee + network_fee]

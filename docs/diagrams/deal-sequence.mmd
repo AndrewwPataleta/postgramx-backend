@@ -1,0 +1,27 @@
+sequenceDiagram
+  autonumber
+  participant Adv as Advertiser
+  participant API as Backend API
+  participant TON as TON Chain
+  participant Bot as Posting Worker
+  participant Ch as Telegram Channel
+
+  Adv->>API: create deal request
+  API-->>Adv: deal in creative stage
+
+  Adv->>API: approve terms
+  API-->>Adv: deposit address and payment deadline
+
+  Adv->>TON: send payment
+  API->>TON: watch escrow address
+  TON-->>API: payment detected
+  API-->>Adv: stage is POST_SCHEDULED
+
+  API-->>Bot: enqueue publish job
+  Bot->>Ch: publish post
+  Ch-->>Bot: message id
+  Bot-->>API: publication created and POSTED_VERIFYING
+
+  API->>Ch: verify message after delay
+  Ch-->>API: verified
+  API-->>API: release payout and finalize
